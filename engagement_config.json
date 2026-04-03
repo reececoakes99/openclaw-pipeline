@@ -1,0 +1,53 @@
+{
+ "engagement_name": "default",
+ "authorized_domains": [],
+ "rate_limits": {
+ "requests_per_second": 5,
+ "max_parallel_requests": 10,
+ "max_depth": 3,
+ "max_urls_per_domain": 5000
+ },
+ "stages": {
+ "osint_recon": true,
+ "asset_discovery": true,
+ "crawl_scrape": true,
+ "dynamic_render": true,
+ "data_extraction": true,
+ "anti_detection": false,
+ "distributed_scaling": false,
+ "dark_web": false,
+ "ai_enrichment": true,
+ "output": true
+ },
+ "exclude_patterns": [
+ "*.jpg",
+ "*.jpeg",
+ "*.png",
+ "*.gif",
+ "*.svg",
+ "*.ico",
+ "*.woff",
+ "*.woff2",
+ "*.ttf",
+ "*.pdf"
+ ],
+ "output_dir": "reports/",
+ "notifications": {
+ "telegram_notify": true,
+ "telegram_chat_id": "8069069638",
+ "notify_on_secret": true,
+ "notify_on_stage_complete": true,
+ "notify_on_error": true
+ },
+ "reporting": {
+ "store_reports": true,
+ "report_format": ["sqlite", "json", "csv", "markdown"]
+ },
+ "evasion": {
+ "rotate_proxies": false,
+ "proxy_list": [],
+ "rotate_user_agents": true,
+ "min_delay_ms": 500,
+ "max_delay_ms": 2000
+ }
+}

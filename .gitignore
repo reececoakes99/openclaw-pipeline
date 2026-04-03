@@ -1,0 +1,32 @@
+# Environment
+.env
+*.env
+
+# Clones
+/tmp/openclaw-clones/
+
+# Reports (exclude from git — too large)
+reports/sqlite/*.db
+reports/json/*.json
+reports/csv/*.csv
+reports/html/*.html
+reports/screenshots/
+
+# Logs
+.openclaw/logs/
+.openclaw/github-discovery/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
